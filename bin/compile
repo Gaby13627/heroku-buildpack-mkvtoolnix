@@ -19,7 +19,7 @@ CACHE_DIR=$2
 if [ -f $BUILD_DIR/MKVToolNixAppImage ] ; then
     DOWNLOAD=$(grep http $BUILD_DIR/MKVToolNixAppImage | head -n 1)
 else
-    DOWNLOAD="https://mkvtoolnix.download/appimage/MKVToolNix_GUI-75.0.0-x86_64.AppImage"
+    DOWNLOAD="https://mkvtoolnix.download/appimage/MKVToolNix_GUI-65.0.0-x86_64.AppImage"
 fi
 VERSION=$(echo $DOWNLOAD | grep -Poi "(?<=MKVToolNix_GUI-)[^/]+(?=\.AppImage)")
 VERSION=${VERSION:-default} # avoid empty version if the grep fails to match
